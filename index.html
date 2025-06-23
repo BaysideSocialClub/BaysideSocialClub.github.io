@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Bayside Social Club</title>
 
+  <!-- Primary SEO Meta Tags -->
+  <meta name="description" content="Bayside is a cult!" />
+  <meta name="author" content="Bayside Social Club" />
+  <meta name="keywords" content="Bayside, Anthony Raneri, Jack O'Shea, Nick Ghanbarian, Chris Guglielmo, music, Bayside Social Club, social club, community, cult, Bayside is a cult" />
+
   <!-- Favicons and manifest -->
   <link rel="icon" type="image/png" href="./src/images/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="./src/images/favicon.svg" />
@@ -14,6 +19,19 @@
   <meta name="apple-mobile-web-app-title" content="BSC" />
   <link rel="manifest" href="./src/images/site.webmanifest" />
 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bayside Social Club" />
+  <meta property="og:description" content="Bayside is a cult!" />
+  <meta property="og:url" content="https://baysidesocialclub.com" />
+  <meta property="og:image" content="https://baysidesocialclub.github.io/src/images/members_gate.jpg" />
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bayside Social Club" />
+  <meta name="twitter:description" content="Bayside is a cult!" />
+  <meta name="twitter:image" content="https://baysidesocialclub.github.io/src/images/members_gate.jpg" />
+
   <style>
     /* Reset */
     *, *::before, *::after {
@@ -21,10 +39,12 @@
       margin: 0;
       padding: 0;
     }
+
     html, body {
       height: 100%;
       background-color: #000;
     }
+
     body {
       font-family: system-ui, sans-serif;
     }
@@ -34,6 +54,8 @@
       height: 100dvh;
       width: 100vw;
       overflow: hidden;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
     }
 
     .hero a {
@@ -43,6 +65,12 @@
       position: relative;
       text-decoration: none;
       outline-offset: 2px;
+      cursor: pointer;
+    }
+
+    .hero a:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 4px;
     }
 
     .hero img {
@@ -52,12 +80,13 @@
       object-position: center center;
       display: block;
       filter: brightness(0.85);
-      transition: filter 0.3s ease;
+      transition: filter 0.3s ease, transform 0.3s ease;
     }
 
     .hero a:hover img,
     .hero a:focus img {
       filter: brightness(1);
+      transform: scale(1.03);
     }
 
     @media (max-width: 600px) {
@@ -66,10 +95,6 @@
       }
     }
 
-    .hero {
-      opacity: 0;
-      animation: fadeIn 1s ease-in forwards;
-    }
     @keyframes fadeIn {
       to {
         opacity: 1;
@@ -79,7 +104,7 @@
 </head>
 <body>
 
-  <section class="hero">
+  <section class="hero" style="opacity:0;">
     <a href="https://www.facebook.com/groups/baysidesocialclub" aria-label="Enter Bayside Social Club">
       <img src="./src/images/members_gate.jpg" alt="Bayside Social Club Entrance" />
     </a>
