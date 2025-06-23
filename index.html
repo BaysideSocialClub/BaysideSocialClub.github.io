@@ -52,10 +52,7 @@
 
     .hero {
       position: relative;
-      height: 100svh;
-      min-height: 100vh;
       width: 100%;
-      overflow: hidden;
       opacity: 0;
       animation: fadeIn 1s ease-in forwards;
     }
@@ -63,8 +60,6 @@
     .hero a {
       display: block;
       width: 100%;
-      height: 100%;
-      position: relative;
       text-decoration: none;
       outline-offset: 2px;
       cursor: pointer;
@@ -77,10 +72,11 @@
 
     .hero img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
+      height: auto;
+      object-fit: contain;
+      object-position: top center;
       display: block;
+      max-height: 100svh;
       filter: brightness(0.85);
       transition: filter 0.3s ease, transform 0.3s ease;
     }
@@ -91,9 +87,20 @@
       transform: scale(1.03);
     }
 
-    @media (max-width: 600px) {
+    @media (min-width: 768px) {
+      .hero {
+        height: 100svh;
+        overflow: hidden;
+      }
+
+      .hero a {
+        height: 100%;
+      }
+
       .hero img {
-        object-position: top center;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
       }
     }
 
