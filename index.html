@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Bayside Social Club</title>
+  <link rel="icon" type="image/png" href="./src/images/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="./src/images/favicon.svg" />
+<link rel="shortcut icon" href="./src/images/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="./src/images/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="BSC" />
+<link rel="manifest" href="./src/images/site.webmanifest" />
+  
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: #000;
+    }
+
+    .hero {
+      position: relative;
+      height: 100dvh;
+      width: 100vw;
+      background-image: url('./src/images/members_gate.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4); /* subtle darkening */
+      z-index: 1;
+    }
+
+    .click-area {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(1.01); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="overlay"></div>
+    <a href="https://www.facebook.com/groups/baysidesocialclub" class="click-area" aria-label="Enter Bayside Social Club"></a>
+  </section>
+</body>
+</html>
