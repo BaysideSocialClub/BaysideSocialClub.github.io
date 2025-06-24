@@ -10,6 +10,8 @@
   <meta name="description" content="Bayside is a cult!" />
   <meta name="author" content="Bayside Social Club" />
   <meta name="keywords" content="Bayside, Anthony Raneri, Jack O'Shea, Nick Ghanbarian, Chris Guglielmo, music, Bayside Social Club, social club, community, cult, Bayside is a cult" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://baysidesocialclub.com/" />
 
   <!-- Favicons and manifest -->
   <link rel="icon" type="image/png" href="./src/images/favicon-96x96.png" sizes="96x96" />
@@ -18,6 +20,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./src/images/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="BSC" />
   <link rel="manifest" href="./src/images/site.webmanifest" />
+
+  <!-- Android/Windows web app meta -->
+  <meta name="theme-color" content="#000000" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="application-name" content="BSC" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -48,6 +56,18 @@
     body {
       font-family: system-ui, sans-serif;
       padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     .hero {
@@ -113,13 +133,15 @@
 </head>
 <body>
 
+  <h1 class="visually-hidden">Bayside Social Club</h1>
+
   <section class="hero">
     <a href="https://www.facebook.com/groups/baysidesocialclub" aria-label="Enter Bayside Social Club">
       <img 
         src="./src/images/members_gate.jpg" 
         srcset="./src/images/members_gate_small.jpg 600w,
                 ./src/images/members_gate.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, 100vw"
+        sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1200px"
         loading="lazy"
         alt="Bayside Social Club Entrance" />
     </a>
