@@ -129,6 +129,35 @@
         opacity: 1;
       }
     }
+
+    /* Global Styles */
+:root {
+  --primary-color: #ff5733; /* Use a vibrant color that matches your banner */
+  --secondary-color: #ffffff; /* Use a contrasting color for text */
+  --link-hover-color: #ff8d33; /* A nice hover effect */
+}
+
+/* Styles for Links */
+a {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px; /* Rounded corners for links */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover, a:focus {
+  background-color: var(--link-hover-color);
+  color: var(--secondary-color); /* Change the text color on hover */
+}
+
+/* Specific Section Links */
+section a {
+  display: inline-block;
+  margin: 4px 0; /* Spacing between links */
+}
+
   </style>
 </head>
 <body>
